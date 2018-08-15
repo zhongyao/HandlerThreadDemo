@@ -31,6 +31,8 @@
         </activity>
         <activity android:name="com.handlerthread.MainThreadToSubThreadActivity" >
         </activity>
+
+        <service android:name="com.handlerthread.intentservice.MyIntentService" />
     </application>
 
 </manifest>

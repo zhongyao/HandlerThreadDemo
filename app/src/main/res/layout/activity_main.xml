@@ -30,4 +30,10 @@
         android:layout_height="wrap_content"
         android:text="主线程给子线程发送消息" />
 
+    <Button
+        android:id="@+id/btnIntentService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IntentService测试" />
+
 </LinearLayout>

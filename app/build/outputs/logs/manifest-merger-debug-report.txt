@@ -1,13 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
 MERGED from [com.android.support:support-v4:21.0.3] /Users/youku/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.3.aar/00216f1860e9b23d3743a399d63ee770/AndroidManifest.xml:14:4-17:12
-INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml
@@ -43,7 +43,7 @@ ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/s
 	android:name
 		ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:11:22-64
 application
-ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:13:5-32:19
+ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:13:5-33:19
 MERGED from [com.android.support:support-v4:21.0.3] /Users/youku/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.3.aar/00216f1860e9b23d3743a399d63ee770/AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:support-v4:21.0.3] /Users/youku/.gradle/caches/transforms-1/files-1.1/support-v4-21.0.3.aar/00216f1860e9b23d3743a399d63ee770/AndroidManifest.xml:16:5-19
 	android:label
@@ -80,3 +80,7 @@ activity#com.handlerthread.MainThreadToSubThreadActivity
 ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:30:9-31:20
 	android:name
 		ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:30:19-81
+service#com.handlerthread.intentservice.MyIntentService
+ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:32:9-65
+	android:name
+		ADDED from /workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/AndroidManifest.xml:32:18-63
