@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/layout_activity_subthread.xml.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/layout/activity_subthread.xml"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/layout_fragment_main.xml.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/layout/fragment_main.xml"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/build/intermediates/res/merged/debug/layout_activity_asynctask.xml.flat",
+        "source": "/workspace/git_resources_20170410/AndroidDemo/HandlerThreadDemo/app/src/main/res/layout/activity_asynctask.xml"
+    }
+]
