@@ -36,15 +36,12 @@ public class MyIntentService extends IntentService {
 
     @Override
     public int onStartCommand(@Nullable Intent intent, int flags, int startId) {
-        //Log.d(YAO, "onStartCommand");
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
         boolean b = Looper.getMainLooper() == Looper.myLooper();
-        //为false，可知在子线程中
-        //Log.v(YAO, String.valueOf(b));
         if (!b) {
             Log.d(YAO, "运行在子线程中...");
         }
@@ -59,8 +56,8 @@ public class MyIntentService extends IntentService {
             }
         }
 
-        if (action.equals(SLEEP2)){
-            Log.d(YAO,"IntentService-->onHandleIntent-->do sleep 3s--Task2");
+        if (action.equals(SLEEP2)) {
+            Log.d(YAO, "IntentService-->onHandleIntent-->do sleep 3s--Task2");
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
