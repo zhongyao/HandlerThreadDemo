@@ -1,5 +1,6 @@
-### Android HandlerThread的使用和理解 + IntentService的使用和理解
+### Android HandlerThread的使用和理解 + IntentService的使用和理解。
 
-#### HandlerThread的使用实例:
-######   每隔几秒钟更新股票大盘数据等
+#### 一、Android中的HandlerThread
+###### 1、HandlerThread的主要作用:
+每隔几秒钟更新数据或图片等
 
