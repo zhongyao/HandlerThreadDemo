@@ -14,8 +14,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import com.handlerthread.intentservice.MyIntentService;
+import com.handlerthread.util.Logger;
 
 /**
+ *
+ * HandlerThread的运用实例类
+ *
  * 参考blog：
  * http://blog.csdn.net/feiduclear_up/article/details/46840523#comments
  * http://blog.csdn.net/lmj623565791/article/details/47079737
@@ -24,7 +28,6 @@ import com.handlerthread.intentservice.MyIntentService;
  */
 public class MainActivity extends Activity implements OnClickListener {
 
-    public static String YAO = "yao";
     private TextView mTvServiceInfo;
 
     private HandlerThread mCheckMsgThread;
@@ -37,38 +40,19 @@ public class MainActivity extends Activity implements OnClickListener {
     // 与UI线程管理的handler
     private Handler mHandler = new Handler();
 
-    private Button button, button1, button2, btnIntentService;
+    private Button btnIntentService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTvServiceInfo = (TextView)findViewById(R.id.textView);
-        button = (Button)findViewById(R.id.button);
-        button1 = (Button)findViewById(R.id.button1);
-        button2 = (Button)findViewById(R.id.button2);
-        btnIntentService = (Button)findViewById(R.id.btnIntentService);
+        mTvServiceInfo = findViewById(R.id.textView);
+        btnIntentService = findViewById(R.id.btnIntentService);
 
-        button.setOnClickListener(this);
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
         btnIntentService.setOnClickListener(this);
         // 创建后台线程
-        //initBackThread();
-
-        //		new Thread(){
-        //			public void run() {
-        //				mCheckMsgHandler.sendEmptyMessage(1);
-        //
-        //				mHandler.post(new Runnable() {
-        //					public void run() {
-        //						mTvServiceInfo.setText("收到");
-        //					}
-        //				});
-        //			};
-        //		}.start();
-
+        initBackgroundThread();
     }
 
     @Override
@@ -89,26 +73,23 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
 
-    /*
+    /**
      * 将HandlerThread中创建的looper传递给Handler。
      *
      * 也就意味着该Handler收到Message后，程序在HandlerThread创建的线程中运行
-     *
      */
-    private void initBackThread() {
+    private void initBackgroundThread() {
         mCheckMsgThread = new HandlerThread("check-message-coming");
         mCheckMsgThread.start();
         mCheckMsgHandler = new Handler(mCheckMsgThread.getLooper()) {
             @Override
             public void handleMessage(Message msg) {
-                boolean b = Looper.getMainLooper() == Looper.myLooper();
-                Log.v("yao", String.valueOf(b));//为false，可知在子线程中
-                Log.d("yao", "mCheckMsgHandler--handleMessage");
+                Logger.d("mCheckMsgHandler--handleMessage");
+                //为false，可知在子线程中
+                Logger.d("是否在主线程：" + (Looper.getMainLooper() == Looper.myLooper()));
                 checkForUpdate();
                 if (isUpdateInfo) {
-                    Log.d("yao", "mCheckMsgHandler--sendEmptyMessageDelayed");
-                    //					mCheckMsgHandler.sendEmptyMessageDelayed(MSG_UPDATE_INFO,
-                    //							1000);
+                    Logger.d("mCheckMsgHandler--sendEmptyMessageDelayed");
                     mCheckMsgHandler.sendEmptyMessage(MSG_UPDATE_INFO);
                 }
             }
@@ -127,8 +108,9 @@ public class MainActivity extends Activity implements OnClickListener {
             mHandler.post(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d("yao", "mHandler--post");
-                    Log.d("yao", (Looper.getMainLooper() == Looper.myLooper()) + "");//为true：可知在UI线程中
+                    Logger.d("mHandler--post");
+                    //为true：可知在UI线程中
+                    Logger.d("是否在主线程：" + (Looper.getMainLooper() == Looper.myLooper()));
                     String result = "实时更新中，当前大盘指数：<font color='red'>%d</font>";
                     result = String.format(result,
                         (int)(Math.random() * 3000 + 1000));
@@ -152,18 +134,6 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button:
-                Intent intent = new Intent(this, AsytaskActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.button1:
-                Intent intent1 = new Intent(this, SubThreaduseHandlerActivity.class);
-                startActivity(intent1);
-                break;
-            case R.id.button2:
-                Intent intent2 = new Intent(this, MainThreadToSubThreadActivity.class);
-                startActivity(intent2);
-                break;
             case R.id.btnIntentService:
                 Intent intentService = new Intent(this, MyIntentService.class);
 

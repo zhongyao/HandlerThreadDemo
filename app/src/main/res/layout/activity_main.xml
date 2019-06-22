@@ -13,24 +13,6 @@
         android:text="正在加载大盘指数.." />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="AsyncTask测试" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="线程中去创建一个Handler" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="主线程给子线程发送消息" />
-
-    <Button
         android:id="@+id/btnIntentService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

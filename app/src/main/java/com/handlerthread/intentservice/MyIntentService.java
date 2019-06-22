@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import com.handlerthread.util.Logger;
 
 /**
  * @author zhongyao
@@ -31,7 +32,7 @@ public class MyIntentService extends IntentService {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d(YAO, "IntentService-->onCreate");
+        Logger.d("IntentService-->onCreate");
     }
 
     @Override
@@ -41,14 +42,11 @@ public class MyIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        boolean b = Looper.getMainLooper() == Looper.myLooper();
-        if (!b) {
-            Log.d(YAO, "运行在子线程中...");
-        }
+        Logger.d("是否运行在子线程中：" + (Looper.getMainLooper() != Looper.myLooper()));
 
         String action = intent.getStringExtra("task_action");
         if (action.equals(SLEEP)) {
-            Log.d(YAO, "IntentService-->onHandleIntent-->do sleep 3s--Task1");
+            Logger.d("IntentService-->onHandleIntent-->do sleep 3s--Task1");
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -57,7 +55,7 @@ public class MyIntentService extends IntentService {
         }
 
         if (action.equals(SLEEP2)) {
-            Log.d(YAO, "IntentService-->onHandleIntent-->do sleep 3s--Task2");
+            Logger.d("IntentService-->onHandleIntent-->do sleep 3s--Task2");
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
