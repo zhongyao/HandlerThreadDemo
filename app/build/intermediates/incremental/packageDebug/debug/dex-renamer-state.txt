@@ -1,4 +1,4 @@
-#Sat Jun 22 15:43:44 CST 2019
-base.0=/workspace/AndroidDemo/HandlerThreadDemo/app/build/intermediates/transforms/dexMerger/debug/0
+#Mon Dec 20 22:37:34 CST 2021
+base.0=/Users/zhongyao/workspace/AndroidStudioProjects/HandlerThreadDemo/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
